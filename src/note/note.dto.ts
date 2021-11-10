@@ -1,5 +1,5 @@
-import {IsNumber, IsOptional, IsString} from "class-validator";
-import {PartialType} from "@nestjs/swagger";
+import { IsNumber, IsString } from "class-validator";
+import { PartialType } from '@nestjs/mapped-types';
 
 export class createNoteDto {
     @IsString()
@@ -15,16 +15,4 @@ export class createNoteDto {
 export class updateNoteDto extends PartialType(createNoteDto) {
     @IsNumber()
     id: number;
-
-    @IsOptional()
-    @IsString()
-    title: string;
-
-    @IsOptional()
-    @IsString()
-    text: string;
-
-    @IsOptional()
-    @IsNumber()
-    userId: number;
 }

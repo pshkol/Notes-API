@@ -1,5 +1,5 @@
-import {IsNumber, IsOptional, IsString} from 'class-validator';
-import {PartialType} from "@nestjs/swagger";
+import { IsNumber, IsOptional, IsString } from 'class-validator';
+import { PartialType } from '@nestjs/mapped-types';
 
 export class createUserDto {
     @IsNumber()

@@ -19,6 +19,7 @@ import { AuthModule } from "./auth/auth.module";
         TYPEORM_HOST: Joi.string().required(),
         TYPEORM_DATABASE: Joi.string().required(),
         TYPEORM_PORT: Joi.number().required(),
+        TYPEORM_ENTITIES: Joi.string().required(),
         SECRET_KEY: Joi.string().required()
       })
     }),

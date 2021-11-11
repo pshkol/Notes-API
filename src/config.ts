@@ -10,11 +10,7 @@ export default registerAs('config', () => {
       host: process.env.TYPEORM_HOST,
       entities: process.env.TYPEORM_ENTITIES,
       migrationsRun: true,
-      migrations: process.env.TYPEORM_MIGRATIONS,
-      migrationsTableName: process.env.TYPEORM_MIGRATIONS_TABLE_NAME,
-      cli: {
-        migrationsDir: process.env.TYPEORM_MIGRATIONS_DIR
-      }
-    }
+    },
+    secretKey: process.env.SECRET_KEY
   }
 })

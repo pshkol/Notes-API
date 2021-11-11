@@ -5,6 +5,7 @@ import { ConfigModule } from "@nestjs/config";
 import config from "./config";
 import { DatabaseModule } from "./database/database.module";
 import * as Joi from "joi";
+import { AuthModule } from "./auth/auth.module";
 
 @Module({
   imports: [
@@ -18,11 +19,13 @@ import * as Joi from "joi";
         TYPEORM_HOST: Joi.string().required(),
         TYPEORM_DATABASE: Joi.string().required(),
         TYPEORM_PORT: Joi.number().required(),
+        SECRET_KEY: Joi.string().required()
       })
     }),
     DatabaseModule,
     UserModule,
     NoteModule,
+    AuthModule
   ],
   controllers: [],
   providers: [],

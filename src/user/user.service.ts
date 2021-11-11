@@ -30,4 +30,8 @@ export class UserService {
     delete(id) {
         return this.userRepo.delete(id)
     }
+
+    async getOneByUsername(username: string): Promise<User> {
+        return await this.userRepo.findOne({username: username})
+    }
 }
